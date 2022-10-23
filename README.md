@@ -9,6 +9,8 @@ Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/bl
 
 The script will run through the supplied paths and list all supported filetypes. It will then install (copy) all `.app`s to your `/Applications/` folder, it will then delete the source.
 
+![](./images/img-1.png)
+
 #### As Keyword:
 * Simply type `install` into Alfred
 * Select the installable file and install with `Enter`
