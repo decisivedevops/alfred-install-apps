@@ -7,7 +7,7 @@ Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/bl
 ## How to use
 **Alfred App Install** searches through your `~/Downloads` folder and lists installable Objects like `.zip` or `.dmg` in Alfred. Upon selection, it will automatically install it to your `/Applications/` folder.
 
-The script will run through the supplied paths and list all supported filetypes. It will then install (copy) all `.app`s to your `/Applications/` folder, it will then delete the source.
+The script will run through the supplied paths and list all supported filetypes. It will then install all `.pkg` and `.app` to your `/Applications/` folder, it will then delete the source.
 
 ![](./images/img-1.png)
 
@@ -19,9 +19,9 @@ The script will run through the supplied paths and list all supported filetypes.
 App Install will find and install the following files:
 
 * Disk Images `.dmg`:
-    - Will automatically mount and unmount the Image, installing all `.app` inside.
+    - Will automatically mount and unmount the Image, installing all `.app` file inside.
 * Archives `.zip`:
-    - Will extract the zip to a temporary location and install all `.app` inside.
+    - Will extract the zip to a temporary location and install all `.pkg` and `.app` files inside.
 
 <!-- ROADMAP -->
 ## Roadmap

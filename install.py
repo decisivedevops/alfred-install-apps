@@ -17,6 +17,10 @@ def find_app_name(directory):
         if root.endswith('app'):
             return root
 
+        for file in files:
+            if file.endswith('pkg'):
+                return file
+
 
 def unzip(source_filename, dest_dir):
     """
@@ -31,15 +35,16 @@ def install_from_archive(source_filename):
     to /Applications.
     """
     dest_dir = './tmp'
-
     unzip(source_filename, dest_dir)
-
     app_name = find_app_name('./tmp')
-    shutil.move(app_name, '/Applications/')
 
-    # Delete the source_filename.
+    if app_name.endswith('pkg'):
+        subprocess.call(['open', '-a', 'Installer', f'{dest_dir}/{app_name}'])
+    elif app_name.endswith('app'):
+        shutil.move(app_name, '/Applications/')
+        os.rmdir(dest_dir)
+
     os.unlink(source_filename)
-    os.rmdir(dest_dir)
 
 
 def install_from_dmg(source_filename):
