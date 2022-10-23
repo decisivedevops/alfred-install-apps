@@ -1,10 +1,12 @@
 # Alfred App Install
 Install your downloaded Mac OS Applications right from [Alfred](https://www.alfredapp.com/).
 
-## Description
-**Alfred App Install** searches through your `~/Downloads` folder and lists installable Objects like `.zip` or `.dmg` in Alfred. Upon selection, it will automatically install it to your `/Applications/` folder.
+## How to install
+Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/blob/main/Installing%20Apps.alfredworkflow). Double click to install directly to Alfred.
 
 ## How to use
+**Alfred App Install** searches through your `~/Downloads` folder and lists installable Objects like `.zip` or `.dmg` in Alfred. Upon selection, it will automatically install it to your `/Applications/` folder.
+
 The script will run through the supplied paths and list all supported filetypes. It will then install (copy) all `.app`s to your `/Applications/` folder, **overwriting** any existing app (think of 'upgrade'), it will then delete the source.
 
 #### As Keyword:
@@ -18,9 +20,6 @@ App Install will find and install the following files:
     - Will automatically mount and unmount the Image, installing all `.app` inside.
 * Archives `.zip`:
     - Will extract the zip to a temporary location and install all `.app` inside.
-
-## How to install
-Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/blob/main/Installing%20Apps.alfredworkflow). Double click to install directly to Alfred.
 
 <!-- ROADMAP -->
 ## Roadmap
