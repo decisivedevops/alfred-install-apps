@@ -3,7 +3,8 @@
 import os
 import subprocess
 import sys
-import zipfile
+import shutil
+
 
 installation_file = sys.argv[1:]
 
@@ -21,9 +22,8 @@ def unzip(source_filename, dest_dir):
     """
     Unzip the source_filename into dest_dir
     """
-    with zipfile.ZipFile(source_filename) as zf:
-        zf.extractall(dest_dir)
-
+    subprocess.check_call(['unzip', '-oqq', source_filename,
+                           '-d', dest_dir])
 
 def install_from_archive(source_filename):
     """
@@ -31,13 +31,15 @@ def install_from_archive(source_filename):
     to /Applications.
     """
     dest_dir = './tmp'
+
     unzip(source_filename, dest_dir)
+
     app_name = find_app_name('./tmp')
-    subprocess.check_call(['mv', app_name,
-                           '/Applications'])
+    shutil.move(app_name, '/Applications/')
+
     # Delete the source_filename.
     os.unlink(source_filename)
-    os.unlink('./tmp')
+    os.rmdir(dest_dir)
 
 
 def install_from_dmg(source_filename):

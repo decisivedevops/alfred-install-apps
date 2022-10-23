@@ -7,7 +7,7 @@ Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/bl
 ## How to use
 **Alfred App Install** searches through your `~/Downloads` folder and lists installable Objects like `.zip` or `.dmg` in Alfred. Upon selection, it will automatically install it to your `/Applications/` folder.
 
-The script will run through the supplied paths and list all supported filetypes. It will then install (copy) all `.app`s to your `/Applications/` folder, **overwriting** any existing app (think of 'upgrade'), it will then delete the source.
+The script will run through the supplied paths and list all supported filetypes. It will then install (copy) all `.app`s to your `/Applications/` folder, it will then delete the source.
 
 #### As Keyword:
 * Simply type `install` into Alfred
