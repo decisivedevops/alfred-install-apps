@@ -4,6 +4,9 @@ Install your downloaded Mac OS Applications right from [Alfred](https://www.alfr
 ## How to install
 Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/blob/main/Installing%20Apps.alfredworkflow). Double click to install directly to Alfred.
 
+## How to install
+Download the [workflow](https://github.com/decisivedevops/alfred-install-apps/blob/main/Installing%20Apps.alfredworkflow). Double click to install directly to Alfred.
+
 ## How to use
 **Alfred App Install** searches through your `~/Downloads` folder and lists installable Objects like `.zip` or `.dmg` in Alfred. Upon selection, it will automatically install it to your `/Applications/` folder.
 
